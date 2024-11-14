@@ -1,0 +1,20 @@
+version: '3'
+services:
+  frontend:
+    build: ./comp-frontend
+    ports:
+      - "3000:3000"
+  backend:
+    build: ./comp-backend
+    ports:
+      - "5000:5000"
+#    environment: - not worrying about db atm. 
+#      - DATABASE_URL=postgres://username:password@db/music_composer
+#  db:
+#    image: postgres
+#    environment:
+#      POSTGRES_USER: username
+#      POSTGRES_PASSWORD: password
+#      POSTGRES_DB: music_composer
+#    ports:
+#      - "5432:5432"
